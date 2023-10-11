@@ -61,8 +61,8 @@ do
     for RUN in "${ALL_RUNS[@]}"
     do
     RELOAD_MODEL="./frozen_segmenters/net_Seg_ev${EVAL_FOLD}.pth"
-    RELOAD_DAE="./exp_logs/CALIB_ACDC/Calibration_tune_proposed_tune_calibrator_proposed_ev${EVAL_FOLD}/${RUN}/snapshots/1600_net_DAE.pth"
-    RELOAD_CALIB="./exp_logs/CALIB_ACDC/Calibration_tune_proposed_tune_calibrator_proposed_ev${EVAL_FOLD}/${RUN}/snapshots/1600_net_Calib.pth"
+    RELOAD_DAE="./pretrained_models/net_DAE_ev${EVAL_FOLD}_run${RUN}.pth"
+    RELOAD_CALIB="./pretrained_models/net_Calib_ev${EVAL_FOLD}_run${RUN}.pth"
     set -ex
     export CUDA_VISIBLE_DEVICES=$GPUID1
 
